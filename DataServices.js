@@ -2,14 +2,14 @@ export const catalog = [
     {
         "title": "Apple",
         "image": "/images/Apple_1.jpg",
-        "price": 0.50,
+        "price": 0.79,
         "category": "Fruit",
         "_id": "123451"
     },
     {
         "title": "Milk",
         "image": "/images/Milk_1.jpg",
-        "price": 2.50,
+        "price": 2.99,
         "category": "Dairy",
         "_id": "123452"
     },
@@ -30,14 +30,14 @@ export const catalog = [
     {
         "title": "Bread",
         "image": "/images/Bread_1.jpeg",
-        "price": 3.50,
+        "price": 3.89,
         "category": "Bread",
         "_id": "123455"
     },
     {
         "title": "Meat",
         "image": "/images/Meat_1.jpg",
-        "price": 8.50,
+        "price": 8.99,
         "category": "Meats",
         "_id": "123456"
     },
