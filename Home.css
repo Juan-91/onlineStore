@@ -1,0 +1,23 @@
+.home img {
+    border: 4px solid rgba(3, 180, 74, 0.656);
+    border-radius: 20px;
+    width: 950px;
+    height: 850px;
+    margin-bottom: 45px;
+    opacity: 80%;
+}
+
+.home h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: rgba(3, 180, 74, 0.656);
+}
+
+.navbar .container-fluid {
+    background-color: rgba(3, 180, 74, 0.656);
+}
+
+.navbar button {
+    color: rgba(0, 0, 0, 0.645);
+    background-color: rgb(234, 234, 178);
+}
