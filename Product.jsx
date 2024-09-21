@@ -8,7 +8,7 @@ function Product(props) {
     }
 
     return (
-        <div className="product">
+        <div className="product page">
             <img src={props.data.image} alt=""></img>
 
             <h4>{props.data.title}</h4>
@@ -19,7 +19,7 @@ function Product(props) {
 
                 <button className="btn btn-sm" onClick={addToCart}>
                     Add
-                </button>
+                    <i class="fa-solid fa-cart-arrow-down"></i>                </button>
             </div>
         </div>
     );

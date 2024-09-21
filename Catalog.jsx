@@ -4,7 +4,7 @@ import { catalog as Products, categories } from '../services/DataServices';
 
 function Catalog() {
     return (
-        <div className="catalog">
+        <div className="catalog page">
             <h2><b>Our Catalog</b></h2>
 
             <div className="filters">
