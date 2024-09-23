@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import './Navbar.css';
 
 import { Link } from 'react-router-dom';
-import DataContext from '../state/DataContext';
+import DataContext from './state/DataContext';
 
 function Navbar() {
 

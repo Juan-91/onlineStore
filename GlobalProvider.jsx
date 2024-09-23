@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import DataContext from './DataContext';
+import DataContext from '../DataContext';
 
 function GlobalProvider(props) {
     const [cart, setCart] = useState([]);
