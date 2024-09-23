@@ -16,3 +16,8 @@
 .navbar .container-fluid .navbar-brand {
     font-size: 40px;
 }
+
+.navbar .container-fluid .d-flex .btn {
+    margin-left: 10px;
+    color: black;
+}

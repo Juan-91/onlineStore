@@ -4,6 +4,7 @@ import { createContext } from 'react';
 Context is the blueprint/interface
 no implementaion
 */
+
 const DataContext = createContext({
     cart: [],
     user: {},

@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import './Navbar.css';
 
 import { Link } from 'react-router-dom';
-import DataContext from './state/DataContext';
+import DataContext from '../state/DataContext';
 
 function Navbar() {
 
@@ -10,6 +10,7 @@ function Navbar() {
 
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
+
             <div className="container-fluid">
                 <Link className="navbar-brand" to="/">
                     <b>Organika</b>
@@ -59,12 +60,14 @@ function Navbar() {
                     </li>
 
                 </ul>
+
                 <form className="d-flex" role="search">
 
-                    <label className="btn btn-outline-light">{user.name}</label>
+                    <label className="btn btn-outline-success">{user.name} <i class="fa-regular fa-user"></i>
+                    </label>
 
-                    <Link className="btn btn-outline-success btn-white" type="submit">
-                        View Cart <i className="fa-solid fa-magnifying-glass"></i>
+                    <Link className="btn btn-outline-success" to="/cart">
+                        View Cart <i class="fa-brands fa-opencart"></i>
                     </Link>
                 </form>
 
