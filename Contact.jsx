@@ -44,7 +44,7 @@ function Contact() {
 
                 <div className='controls'>
                     <button className='btn btn-outline-dark' onClick={send}>
-                        Send <i class="fa-regular fa-paper-plane"></i></button>
+                        Send <i className="fa-regular fa-paper-plane"></i></button>
                 </div>
             </div>
         </div>

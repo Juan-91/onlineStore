@@ -1,19 +1,21 @@
 import { useState } from 'react';
 import './Quantity.css';
 
-function Quantity() {
+function Quantity(props) {
     const [quantity, setQuantity] = useState(1);
 
     function handleDecrease() {
-        let value = quantity - 1;
         if (quantity == 0) return;
 
+        let value = quantity - 1;
         setQuantity(value);
+        props.onChange(value);
     }
 
     function handleIncrease() {
         let value = quantity + 1;
         setQuantity(value);
+        props.onChange(value);
     }
 
     return (

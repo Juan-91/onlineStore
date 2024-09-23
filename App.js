@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Admin from './pages/Admin';
 import Contact from './pages/Contact'
+import GlobalProvider from './state/GlobalProvider';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
@@ -16,21 +17,24 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Navbar />
+    <GlobalProvider>
+      <BrowserRouter>
+        <div className="App">
+          <Navbar />
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/catalog" element={<Catalog />} />
-          <Route path="about" element={<About />} />
-          <Route path="/admin" element={<Admin />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/catalog" element={<Catalog />} />
+            <Route path="about" element={<About />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
 
-        <Footer />
-      </div>
-    </BrowserRouter>
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </GlobalProvider>
+
   );
 }
 export default App;

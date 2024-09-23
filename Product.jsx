@@ -1,10 +1,21 @@
+import { useState } from 'react';
 import './Product.css';
 import Quantity from './Quantity';
 
 function Product(props) {
+    const [quantity, setQuantity] = useState(1);
 
-    function addToCart() {
+    function add() {
         console.log('Added');
+    }
+
+    function handleQuantity(qty) {
+        setQuantity(qty);
+    }
+
+    function getTotal() {
+        let total = props.data.price * quantity;
+        return total.toFixed(2);
     }
 
     return (
@@ -12,14 +23,17 @@ function Product(props) {
             <img src={props.data.image} alt=""></img>
 
             <h4>{props.data.title}</h4>
-            <label>${props.data.price}</label>
-
+            <div className="prices">
+                <label className='price'>Price <br /> <span><b>${props.data.price.toFixed(2)}</b></span></label>
+                <label className='total'>Total <br /> <span><b>${getTotal()}</b></span></label>
+            </div>
             <div className="controls">
-                <Quantity></Quantity>
+                <Quantity onChange={handleQuantity}></Quantity>
 
-                <button className="btn btn-sm" onClick={addToCart}>
+                <button className="btn btn-sm btn-success" onClick={add}>
                     Add
-                    <i class="fa-solid fa-cart-arrow-down"></i>                </button>
+                    <i className="fa-solid fa-cart-arrow-down"></i>
+                </button>
             </div>
         </div>
     );

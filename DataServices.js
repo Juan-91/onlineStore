@@ -40,7 +40,7 @@ export const catalog = [
         "price": 8.99,
         "category": "Meats",
         "_id": "123456"
-    },
+    }
 ];
 
 

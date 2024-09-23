@@ -1,6 +1,6 @@
 import Product from '../components/Product';
 import './Catalog.css';
-import { catalog as Products, categories } from '../services/DataServices';
+import { catalog as products, categories } from '../services/DataServices';
 
 function Catalog() {
     return (
@@ -11,7 +11,7 @@ function Catalog() {
                 {categories.map(cat => <button className="btn btn-small btn-outline-light">{cat}</button>)}
             </div>
 
-            {Products.map(prod => <Product data={prod}></Product>)}
+            {products.map(prod => <Product data={prod}></Product>)}
 
         </div >
     );
