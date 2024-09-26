@@ -4,7 +4,7 @@
 
 
 .navbar .container-fluid {
-    background-color: rgba(3, 180, 74, 0.656);
+    background-color: rgba(5, 171, 116, 0.998);
 }
 
 .navbar button {
@@ -19,5 +19,6 @@
 
 .navbar .container-fluid .d-flex .btn {
     margin-left: 10px;
-    color: black;
+    background-color: #2d3833;
+    color: #96ceb4;
 }

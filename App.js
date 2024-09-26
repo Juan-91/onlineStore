@@ -6,7 +6,8 @@ import Catalog from './pages/Catalog';
 import Home from './pages/Home';
 import About from './pages/About';
 import Admin from './pages/Admin';
-import Contact from './pages/Contact'
+import Contact from './pages/Contact';
+import Cart from './pages/Cart';
 import GlobalProvider from './state/GlobalProvider';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -28,6 +29,7 @@ function App() {
             <Route path="about" element={<About />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/cart" element={<Cart />} />
           </Routes>
 
           <Footer />

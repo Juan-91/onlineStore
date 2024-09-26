@@ -1,6 +1,6 @@
 .admin {
     background-color: rgba(139, 139, 0, 0.085);
-    padding-top: 40px;
+    padding-top: 30px;
 }
 
 .admin h1 {
@@ -24,7 +24,7 @@
 }
 
 .admin .form {
-    border: 1px solid gray;
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 6px;
     width: 400px;
     padding: 12px;
@@ -32,6 +32,8 @@
     text-align: left;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 0px 10px 15px -3px rgb(0, 0, 0);
+
 }
 
 .admin .form h3 {
@@ -47,4 +49,30 @@
 
 .admin .form .controls {
     text-align: center;
+}
+
+.admin .prod {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    width: 450px;
+    border: 1px solid #ffd95e;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 10px;
+    margin-left: 145px;
+    margin-top: 15px;
+    background-color: rgba(255, 255, 255, 0.852);
+}
+
+.admin .prod img {
+    height: 70px;
+}
+
+.admin .prod h5 {
+    flex: 4;
+}
+
+.admin .prod label {
+    flex: 1;
 }

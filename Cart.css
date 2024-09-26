@@ -1,0 +1,40 @@
+.cart .prod-cart {
+    display: flex;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.cart .prod-cart img {
+    height: 80px;
+}
+
+.cart .prod-cart h5 {
+    flex: 5;
+}
+
+.cart .prod-cart label {
+    margin-top: 25px;
+    flex: 1;
+}
+
+.cart .prod-cart button {
+    background-color: #f8d7d7f8;
+    color: #ff2a2a;
+    width: 50px;
+}
+
+.cart .parent {
+    display: flex;
+    width: 1000px;
+}
+
+.cart .list {
+    flex: 3;
+}
+
+.cart .side {
+    flex: 1;
+    margin-left: 15px;
+}

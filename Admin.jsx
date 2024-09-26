@@ -2,10 +2,9 @@ import { useState } from 'react';
 import './Admin.css';
 
 function Admin() {
-    const [coupon, setCoupon] = useState({
-        code: "",
-        discount: ""
-    });
+
+    const [allCoupons, setAllCoupons] = useState([]);
+    const [allProducts, setAllProducts] = useState([]);
 
     const [product, setProduct] = useState({
         title: "",
@@ -14,19 +13,11 @@ function Admin() {
         price: ""
     });
 
+    const [coupon, setCoupon] = useState({
+        code: "",
+        discount: ""
+    });
 
-    function handleCoupon(e) {
-        const text = e.target.value;
-        const name = e.target.name;
-
-        const copy = { ...coupon };
-        copy[name] = text;
-        setCoupon(copy);
-    }
-
-    function saveCoupon() {
-        console.log(coupon);
-    }
 
     function handleProduct(e) {
         const text = e.target.value;
@@ -39,7 +30,27 @@ function Admin() {
 
     function saveProduct() {
         console.log(product);
+        let copy = [...allProducts];
+        copy.push(product);
+        setAllProducts(copy);
     }
+
+    function handleCoupon(e) {
+        const text = e.target.value;
+        const name = e.target.name;
+
+        const copy = { ...coupon };
+        copy[name] = text;
+        setCoupon(copy);
+    }
+
+    function saveCoupon() {
+        console.log(coupon);
+        let copy = [...allCoupons];
+        copy.push(coupon);
+        setAllCoupons(copy);
+    }
+
 
     return (
         <div className="admin page">
@@ -52,7 +63,7 @@ function Admin() {
 
                         <div>
                             <label className="form-label">Title</label>
-                            <input type="text" className='form-control' onBlur={handleProduct} name="name" />
+                            <input type="text" className='form-control' onBlur={handleProduct} name="title" />
                         </div>
 
                         <div>
@@ -74,6 +85,14 @@ function Admin() {
                             <button className='btn btn-outline-dark' onClick={saveProduct}>Save Product</button>
                         </div>
                     </div>
+
+                    {allProducts.map((prod) => (
+                        <li className='prod'>
+                            <img src={prod.image} alt="" />
+                            <h5>{prod.title}</h5>
+                            <label>${prod.price}</label>
+                        </li>
+                    ))}
                 </div>
 
                 <div className='coupons'>
@@ -94,6 +113,9 @@ function Admin() {
                             <button className='btn btn-outline-dark' onClick={saveCoupon}>Save Coupon</button>
                         </div>
                     </div>
+
+                    {allCoupons.map(cp => <li>{cp.code} - {cp.discount}%</li>)}
+
                 </div>
             </div>
         </div>
